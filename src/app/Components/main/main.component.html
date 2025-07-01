@@ -1,0 +1,20 @@
+<button
+  [style.background-color]="darkMode ? '#fff' : '#2a2a2a'"
+  [style.color]="darkMode ? 'black' : 'white'"
+  class="theme-button"
+  (click)="setDarkMode()"
+>
+  {{ darkMode ? "Light Mode" : "Dark Mode" }}
+</button>
+<h1 [style.color]="darkMode ? '#fff' : '#000'">Intro In Angular</h1>
+
+<div class="main-container">
+  <div class="count-div">
+    <span [style.color]="darkMode ? '#fff' : '#000'">{{ count }}</span>
+    <div class="buttons-div">
+      <button (click)="decrement()" [disabled]="!count">-</button>
+      <button (click)="increment()">+</button>
+    </div>
+  </div>
+  <img class="logo" src="icon-angular.png" alt="" />
+</div>
